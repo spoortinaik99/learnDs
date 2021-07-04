@@ -1,6 +1,6 @@
 # Requirements
 
-## Introduction
+# Introduction
 The LearnDS project is being developed in C programming language. This project helps Students who want to learn programming get started with Data Structures with visualization, information and code. User can enter Username, which is just being used to keep a bookmark where the user left learning in previous session. The user can freely use its any feature.
 # Research
 ## Cost Feature and timeline
@@ -18,19 +18,20 @@ User can enter the username to get the bookmark where the user left off learning
 * Saves user time.
 * Provides a better way for learning learn Data Structures by providing the execution and visualization features.
 
-## SWOT Analysis
+# SWOT Analysis
 
 # Detailed Requirements
 
 ## High Level Requirements
 The High Level Requirements are as follows:
-    * Create a username
-    * Provide inputs to select from the lists
-    * Execute
-    * Visualize
-    * Bookmark
+* Create a username
+* Provide inputs to select from the lists
+* Execute
+* Visualize
+* Bookmark
 
 ## Low Level Requirements
+The Low Level Requirements are as follows:
 
 
 
