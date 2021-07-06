@@ -11,6 +11,3 @@ Structural diagrams and Behavioral diagrams
 ### Behavioral Diagram :
 ![UseCase_Design](https://github.com/KubasadSumanth/learnDs/blob/main/2_Architecture/Behavoir_diagram/UseCase.png?raw=true)
 
-
-## High Level Design
-## Low Level Design
