@@ -3,13 +3,11 @@
 #include<stdlib.h>
 
 void visualize_stack(char stack[],int stackSize){
-    int temp=10-stackSize;
-    printf("%d",stackSize);
-    while (!stackSize==10)
+    printf("\nVisualization of the stack:-\n\n\n\n");
+    while (!(stackSize==10))
     {
-        printf("%c\n",stack[stackSize]);
-        stackSize++;
-        /* code */
+        printf("| %c |\n",stack[stackSize++]);
+        printf("-----\n");
     }
     
     getchar();
@@ -22,7 +20,7 @@ void push(char element, char stack[], int *top, int stackSize){
   *top = stackSize - 1;
  }
  else if(*top == 0){
-  printf("The stack is already full. \n");
+  printf("\n\nThe stack is already full. \n\n Try Popping out\n\n");
  }
  else{
   stack[(*top) - 1] = element;
@@ -32,7 +30,7 @@ void push(char element, char stack[], int *top, int stackSize){
 
 void pop(char stack[], int *top, int stackSize){
  if(*top == -1){
-   printf("The stack is empty. \n");
+   printf("\n\n\nThe stack is empty. \n");
  }
  else{
   printf("Element popped: %c \n", stack[(*top)]);
@@ -58,7 +56,7 @@ void start_stack(){
 
     while (1)
     {
-        printf("------------------------------------------------------------\n\n\n");
+        printf("\n\n\n------------------------------------------------------------\n\n\n");
         printf("Stack Operations\n");
         printf("1.Push\n");
         printf("2.Pop\n");
@@ -72,11 +70,11 @@ void start_stack(){
             printf("Enter Element to push\n");
             scanf(" %c",&k);
             push(k, stack, &top, stackSize);
-            printf("Element on top: %c\n", stack[top]);
-            visualize_stack(stack,stackSize);
+            visualize_stack(stack,top);
             break;
         case 2:
             pop(stack, &top, stackSize);
+            visualize_stack(stack,top);
             break;
             default: printf("Enter proper Choice\n"); 
             break;
