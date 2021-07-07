@@ -20,7 +20,7 @@ User can enter the username to get the bookmark where the user left off learning
 # SWOT Analysis
 
 
-![UseCase_Design](https://github.com/KubasadSumanth/learnDs/blob/main/1_Requirements/LearnDS.png?raw=true)
+![SWOT](https://github.com/KubasadSumanth/learnDs/blob/main/1_Requirements/LearnDS.png?raw=true)
 
 
 # Detailed Requirements
