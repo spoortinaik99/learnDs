@@ -1,10 +1,27 @@
+/**
+ * @file operations.c
+ * @author Sumanth 
+ * @brief Contains all the functions of this project
+ * @version 0.4
+ * @date 2021-07-07
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
+
 #include <fun.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
-
+/**
+ * @brief This function takes stack and visualizes it beautifully.
+ * 
+ * @param stack 
+ * @param stackSize 
+ */
 void visualize_stack(char stack[],int stackSize){
     printf("\nVisualization of the stack:-\n\n\n\n");
     while (!(stackSize==10))
