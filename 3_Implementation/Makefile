@@ -1,6 +1,12 @@
 # Name of the project
 PROJECT_NAME = learnDs
 
+ifeq ($(OS),Windows_NT)
+	EXECUTABLE=a.exe
+else
+	EXECUTABLE=a.out
+endif
+
 # Output directory
 BUILD = build
 
@@ -13,7 +19,7 @@ TEST_SRC = src/operations.c\
 test/test_calculator_operations.c\
 unity/unity.c\
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+TEST_OUTPUT = $(BUILD)/Test_$(EXECUTABLE)
 
 # All include folders with header files
 INC	= -Iinc\
@@ -24,7 +30,7 @@ INC	= -Iinc\
 INCLUDE_LIBS = -lcunit
 
 # Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+PROJECT_OUTPUT = $(BUILD)/$(EXECUTABLE)
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
@@ -36,11 +42,11 @@ $(PROJECT_NAME):all
 .PHONY: run clean test doc all
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT)
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
+	./$(PROJECT_OUTPUT)
 
 # Document the code using Doxygen
 doc:

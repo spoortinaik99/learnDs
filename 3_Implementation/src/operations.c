@@ -112,3 +112,134 @@ int stack_op()
     }
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+//QUEUE
+
+
+#define MAX 50
+
+int queue_array[MAX];
+int rear = - 1;
+int front = - 1;
+
+
+
+void display()
+{
+    int i;
+    if(front == - 1)
+        printf("Queue is empty n");
+    else
+    {
+        printf("\n\n\n------------------------------------------------------------\n\n\n");
+
+        printf("Visualization of Queue is \n\n");
+
+        printf("----------------------------------------------------------------\n");
+        for(i = front; i <= rear; i++)
+            printf("%d ", queue_array[i]);
+        printf("\n----------------------------------------------------------------\n");
+        printf("\n\n\n------------------------------------------------------------\n\n\n");
+    }
+}
+
+
+void insert()
+{
+    int item;
+    if(rear == MAX - 1)
+    printf("Queue Overflow n");
+    else
+    {
+        if(front== - 1)
+        front = 0;
+        printf("Type an integer to Insert the element in queue : ");
+        scanf("%d", &item);
+        rear = rear + 1;
+        queue_array[rear] = item;
+        display();
+    }
+}
+void delete()
+{
+    if(front == - 1 || front > rear)
+    {
+    printf("Queue Underflow n");
+    return;
+    }
+    else
+    {
+    printf("Element deleted from queue is : %dn", queue_array[front]);
+    front = front + 1;
+            display();
+
+    }
+}
+
+void queue_init(){
+    int choice;
+    while (1)
+    {
+    printf("1.Insert element to queue \n");
+    printf("2.Delete element from queue \n");
+    printf("4.Quit \n");
+    printf("Enter your choice : ");
+    scanf("%d", &choice);
+    switch(choice)
+    {
+    case 1:
+    insert();
+    break;
+    case 2:
+    delete();
+    break;
+    case 3:
+    display();
+    break;
+    case 4:
+    exit(1);
+    default:
+    printf("Wrong choice n\n");
+    }
+    }
+}
+void start_queue(){
+    int c;
+    while (1)
+    {
+    printf("1.Information \n");
+    printf("2.Execution \n");
+    printf("4.Quit \n");
+    printf("Enter your choice : ");
+    scanf("%d", &c);
+    switch(c)
+    {
+    case 1:
+        printf("\n\n\n------------------------------------------------------------\n\n\n");
+
+        printf("Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.\n");
+        printf("A real-world example of queue can be a single-lane one-way road, where the vehicle enters first, exits first. More real-world examples can be seen as queues at the ticket windows and bus-stops.");
+        printf("\n\n\n------------------------------------------------------------\n\n\n");
+
+    break;
+    case 2:
+    queue_init();
+    break;
+    case 4:
+    exit(0);
+    default:
+    printf("Wrong choice n\n");
+    }
+    }
+    return;
+}

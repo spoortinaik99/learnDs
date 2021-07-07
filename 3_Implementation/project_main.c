@@ -9,7 +9,6 @@
  * 
  */
 #include <fun.h>
-
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -21,7 +20,7 @@ int main(){
     printf("\n");
     printf("\n");
     printf("\n");
-    printf("Enter any character to get started.\n");
+    printf("Press Enter to get started.\n");
 
     getchar();
     //int r = stack_op(12,43);
@@ -40,7 +39,9 @@ int main(){
     case 1:
         stack_op();
         break;
-    
+    case 2:
+        start_queue();
+        break;
     default: printf("Enter proper Choice\n"); 
         break;
     }
