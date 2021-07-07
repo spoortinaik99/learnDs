@@ -157,7 +157,7 @@ void display()
 }
 
 
-void insert()
+void insert_queue()
 {
     int item;
     if(rear == MAX - 1)
@@ -201,7 +201,7 @@ void queue_init(){
     switch(choice)
     {
     case 1:
-    insert();
+    insert_queue();
     break;
     case 2:
     delete();
@@ -249,7 +249,7 @@ void start_queue(){
 
 
 
-//TREES
+//LINKED LIST
 
 
 
@@ -371,4 +371,179 @@ void start_ll(){
     }
 
     return;
+}
+
+
+//TREES
+
+struct bin_tree {
+int data;
+struct bin_tree * right, * left;
+};
+typedef struct bin_tree node;
+
+
+
+
+void inserttree(node ** tree, int val)
+{
+    node *temp = NULL;
+    if(!(*tree))
+    {
+        temp = (node *)malloc(sizeof(node));
+        temp->left = temp->right = NULL;
+        temp->data = val;
+        *tree = temp;
+        return;
+    }
+
+    if(val < (*tree)->data)
+    {
+        inserttree(&(*tree)->left, val);
+    }
+    else if(val > (*tree)->data)
+    {
+        inserttree(&(*tree)->right, val);
+    }
+
+}
+
+void print_preorder(node * tree)
+{
+    if (tree)
+    {
+        printf("\t%d\n",tree->data);
+        print_preorder(tree->left);
+        print_preorder(tree->right);
+    }
+
+}
+
+void print_inorder(node * tree)
+{
+    if (tree)
+    {
+        print_inorder(tree->left);
+        printf("\t%d\n",tree->data);
+        print_inorder(tree->right);
+    }
+}
+
+void print_postorder(node * tree)
+{
+    if (tree)
+    {
+        print_postorder(tree->left);
+        print_postorder(tree->right);
+        printf("\t%d\n",tree->data);
+    }
+}
+
+void deltree(node * tree)
+{
+    if (tree)
+    {
+        deltree(tree->left);
+        deltree(tree->right);
+        free(tree);
+    }
+}
+
+
+
+
+
+
+void tree_i(){
+
+     node *root;
+    node *tmp;
+    //int i;
+
+    root = NULL;
+
+    int c,val;
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+    while(1){
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+        printf("0.Exit\n");
+        printf("1.Insert\n");
+        printf("2.Preorder\n");
+        printf("3.Inorder\n");
+        printf("4.Postorder\n");
+        printf("5.Delete Tree\n");
+        printf("Enter your choice");
+        scanf("%d",&c);
+        switch (c)
+        {
+        case 0:
+            exit(0);
+            break;
+        case 1:
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+            printf("Enter Int Value to Insert:");
+            scanf("%d",&val);
+            inserttree(&root,val);
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+            break;
+        case 2:
+    print_preorder(root);
+            break;
+        case 3:
+    print_inorder(root);
+            break;
+        case 4:
+    print_postorder(root);
+            break;
+        case 5:
+    deltree(root);
+            break;
+        
+        default:printf("Enter proper Choice\n");
+            break;
+        }
+    }
+
+}
+
+
+
+void start_tree(){
+    int ch;
+
+    while(1){
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+        printf("1.Information\n");
+        printf("2.Execution\n");
+        printf("0.Exit\n");
+        printf("Enter your choice");
+
+        scanf("%d",&ch);
+        switch (ch)
+        {
+        case 0:
+            exit(0);
+            break;
+        case 1:
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+            printf("Binary tree is the data structure to maintain data into memory of program. There exists many data structures, but they are chosen for usage on the basis of time consumed in insert/search/delete operations performed on data structures.\n");
+            printf("Binary tree is basically tree in which each node can have two child nodes and each child node can itself be a small binary tree.\n");
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+            break;
+        case 2:
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+            tree_i();
+            break;
+        default:printf("Enter proper Choice\n");
+            break;
+        }
+    }
+
 }

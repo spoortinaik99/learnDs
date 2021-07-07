@@ -15,27 +15,31 @@
 int main(){
     int choice;
     printf("-- Welcome to LearnDs (Data Structures) Project --\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
+    printf("\n\n\n\n\n\n");
     printf("Press Enter to get started.\n");
 
     getchar();
     //int r = stack_op(12,43);
     //printf(" %d\n",r);
-    printf("------------------------------------------------------------\n");
+
+    while(1){
+        
+    
+    printf("\n\n\n------------------------------------------------------------\n\n\n");
 
     printf("1. Stack \n");
     printf("2. Queue \n");
     printf("3. Linked List \n");
     printf("4. Trees \n");
+    printf("0. Exit \n");
+
     scanf("%d",&choice);
     printf("\n\n\n\n");
 
+    
     switch (choice)
     {
+    case 0 :exit(0);
     case 1:
         stack_op();
         break;
@@ -45,9 +49,13 @@ int main(){
     case 3:
         start_ll();
         break;
+    case 4:
+        start_tree();
+        break;
 
     default: printf("Enter proper Choice\n"); 
         break;
+    }
     }
     return 0;
 }

@@ -20,4 +20,5 @@ void push(char element, char stack[], int *top, int stackSize);
 
 void start_queue();
 void start_ll();
+void start_tree();
 
