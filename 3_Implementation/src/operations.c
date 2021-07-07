@@ -33,7 +33,14 @@ void visualize_stack(char stack[],int stackSize){
     getchar();
     
 }
-
+/**
+ * @brief Pushes the element at the top of the stack
+ * 
+ * @param element 
+ * @param stack 
+ * @param top 
+ * @param stackSize 
+ */
 void push(char element, char stack[], int *top, int stackSize){
  if(*top == -1){
   stack[stackSize - 1] = element;
@@ -47,7 +54,12 @@ void push(char element, char stack[], int *top, int stackSize){
   (*top)--;
  }
 }
-
+/**
+ * @brief Pops the top element and the prints the stack for visualization
+ * @param stack 
+ * @param top 
+ * @param stackSize 
+ */
 void pop(char stack[], int *top, int stackSize){
  if(*top == -1){
    printf("\n\n\nThe stack is empty. \n");
@@ -62,7 +74,11 @@ void pop(char stack[], int *top, int stackSize){
   }
  }
 }
-
+/**
+ * @brief Initiation of stack execution
+ * takes no parameters
+ * @return void
+ */
 
 void start_stack(){
 
@@ -103,7 +119,11 @@ void start_stack(){
    
 }
 
-
+/**
+ * @brief Contains all the stack operations 
+ * Called after start_stack function is called first
+ * @return int 
+ */
 
 
 int stack_op()
