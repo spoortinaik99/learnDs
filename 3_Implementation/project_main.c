@@ -42,6 +42,10 @@ int main(){
     case 2:
         start_queue();
         break;
+    case 3:
+        start_ll();
+        break;
+
     default: printf("Enter proper Choice\n"); 
         break;
     }

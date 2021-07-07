@@ -1,6 +1,9 @@
 #include <fun.h>
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
 
 void visualize_stack(char stack[],int stackSize){
     printf("\nVisualization of the stack:-\n\n\n\n");
@@ -241,5 +244,131 @@ void start_queue(){
     printf("Wrong choice n\n");
     }
     }
+    return;
+}
+
+
+
+//TREES
+
+
+
+
+
+
+
+struct node {
+   int data;
+   struct node *next;
+};
+
+struct node *head = NULL;
+struct node *current = NULL;
+
+//display the list
+void printList() {
+
+   struct node *ptr = head;
+   printf("\nVisualization of Linked List");
+
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+   printf("\n[head] =>");
+   //start from the beginning
+   while(ptr != NULL) {        
+      printf(" %d =>",ptr->data);
+      ptr = ptr->next;
+   }
+
+   printf(" [null]\n");
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+}
+
+//insert link at the first location
+void insertll(int data) {
+   //create a link
+   struct node *link = (struct node*) malloc(sizeof(struct node));
+
+   //link->key = key;
+   link->data = data;
+
+   //point it to old first node
+   link->next = head;
+
+   //point first to new first node
+   head = link;
+   
+   printList();
+}
+
+
+
+
+
+
+
+void ll_init(){
+        int item;
+    int cho;
+    while (1)
+    {
+    printf("1.Insert \n");
+    printf("0.Exit \n");
+    printf("Enter your choice : ");
+
+    scanf("%d", &cho);
+    switch (cho)
+    {
+    case 0:
+        exit(0);
+        break;
+    
+    case 1:
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+        printf("Enter the Integer element to insert: ");
+        scanf("%d",&item);
+        insertll(item);
+        break;
+    default:
+    printf("Wrong choice n\n");
+        break;
+    }
+    }
+    
+}
+
+void start_ll(){
+
+    int c;
+    while (1)
+    {
+    printf("1.Information \n");
+    printf("2.Execution \n");
+    printf("4.Quit \n");
+    printf("Enter your choice : ");
+    scanf("%d", &c);
+    switch(c)
+    {
+    case 1:
+        printf("\n\n\n------------------------------------------------------------\n\n\n");
+
+        printf("The size of the linked list is not fixed, and data items can be added at any locations in the list. The disadvantage is that to get to a node, we must traverse to all the way from the first node to the node that we require. The Linked List is like an array but unlike an array, it is not stored sequentially in the memory.\n");
+        printf("There are multiple functions that can be implemented on the linked list in C. Let’s try to understand them with the help of an example program. First, we create a list, display it, insert at any location, delete a location. The following code will show you how to perform operations on the list.");
+        printf("\n\n\n------------------------------------------------------------\n\n\n");
+
+    break;
+    case 2:
+   printf("\n\n\n---------------------------------------------------------------------\n\n\n");
+
+    ll_init();
+    break;
+    case 4:
+    exit(0);
+    default:
+    printf("Wrong choice n\n");
+    }
+    }
+
     return;
 }
