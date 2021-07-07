@@ -1,3 +1,28 @@
+
+name: Valgrind-Dynamic Code Quality Analysis
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: apt install dependency
+        run: |
+          sudo apt-get -y install valgrind
+          sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
+      - name: make
+        run: make -C 3_Implementation/ all
+#       - name: Valgrind
+#         run: valgrind ./3_Implementation/Build/F1-Pitstop-Strategy-Generator.out
+
+
+"""
 name: Valgrind
 
 on:
@@ -21,3 +46,4 @@ jobs:
       run: |
         make test -C MiniProject_C/3_Implementation/
         valgrind ./MiniProject_C/3_Implementation/build/a.out
+"""
