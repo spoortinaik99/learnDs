@@ -1,7 +1,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
 
 /**
 *  adds the operand1 and operand2 and returns the result
