@@ -40,7 +40,6 @@ void pushop(void)
   char stack[10];
 
   TEST_ASSERT_EQUAL(0,push(ele,stack,0,10));
-  //TEST_ASSERT_EQUAL(0, 0);
 }
 int main()
 {

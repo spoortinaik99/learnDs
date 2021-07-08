@@ -10,7 +10,6 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-    int stackSize = 10;
 
 /**
  * @brief Contains all the stack operations 
