@@ -41,17 +41,20 @@ void visualize_stack(char stack[],int stackSize){
  * @param top 
  * @param stackSize 
  */
-void push(char element, char stack[], int *top, int stackSize){
+int push(char element, char stack[], int *top, int stackSize){
  if(*top == -1){
   stack[stackSize - 1] = element;
   *top = stackSize - 1;
+  return 1;
  }
  else if(*top == 0){
   printf("\n\nThe stack is already full. \n\n Try Popping out\n\n");
+  return -1;
  }
  else{
   stack[(*top) - 1] = element;
   (*top)--;
+  return 0;
  }
 }
 /**

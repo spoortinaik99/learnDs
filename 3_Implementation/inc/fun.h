@@ -10,6 +10,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+    int stackSize = 10;
 
 /**
  * @brief Contains all the stack operations 
@@ -38,7 +39,7 @@ void pop(char stack[], int *top, int stackSize);
  * @param top 
  * @param stackSize 
  */
-void push(char element, char stack[], int *top, int stackSize);
+int push(char element, char stack[], int *top, int stackSize);
 
  
 /**

@@ -16,7 +16,7 @@ src/operations.c
 
 # All test source files
 TEST_SRC = src/operations.c\
-test/test_calculator_operations.c\
+test/test.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(EXECUTABLE)
@@ -53,8 +53,9 @@ doc:
 	make -C ./documentation
 
 # Build and run the unit tests
+#$(INCLUDE_LIBS)
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) 
 	./$(TEST_OUTPUT)
 
 analyze: test memcheck staticcheck coverage sanitize_check
