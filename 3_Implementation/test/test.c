@@ -36,10 +36,10 @@ void test_display(void)
 
 void pushop(void)
 {
-  char ele="9";
-  char stack[10];
+  //char ele="9";
+  //char stack[10];
 
-  TEST_ASSERT_EQUAL(0,push(ele,stack,0,10));
+  TEST_ASSERT_EQUAL(0,display());
 }
 int main()
 {

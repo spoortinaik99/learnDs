@@ -177,11 +177,13 @@ int front = - 1;
 
 
 
-void display()
+int display()
 {
     int i;
-    if(front == - 1)
+    if(front == - 1){
         printf("Queue is empty n");
+        return 0;
+    }
     else
     {
         printf("\n\n\n------------------------------------------------------------\n\n\n");
@@ -193,6 +195,7 @@ void display()
             printf("%d ", queue_array[i]);
         printf("\n----------------------------------------------------------------\n");
         printf("\n\n\n------------------------------------------------------------\n\n\n");
+        return 0;
     }
 }
 
