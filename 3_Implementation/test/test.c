@@ -31,11 +31,11 @@ void q_display(void)
   //char stack[10];
 
   TEST_ASSERT_EQUAL(0, display());
-} 
+}
 void test_push(void)
 {
 
-  int stackSize =/*
+  int stackSize = /*
 void test_visual_stack(void)
 {
   #ifndef V
@@ -46,7 +46,7 @@ void test_visual_stack(void)
   #endif
   TEST_ASSERT_EQUAL(true,visualize_stack(stack,8));
 }*/
- 10;
+      10;
   char stack[10];
   char element;
   int top = -1;
@@ -67,47 +67,47 @@ void test_tree()
   int val = 10;
   TEST_ASSERT_EQUAL_INT_MESSAGE(-1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
 }
-void test_print_preorder(){
+void test_print_preorder()
+{
   node *root;
   root = NULL;
   int val = 10;
 
   TEST_ASSERT_EQUAL_INT_MESSAGE(-1, print_preorder(root), "tree exists");
   TEST_ASSERT_EQUAL_INT_MESSAGE(-1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
-   val=11;
+  val = 11;
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
-   val=9;
+  val = 9;
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, print_preorder(root), "Empty tree");
-
 }
-void test_print_inorder(){
+void test_print_inorder()
+{
   node *root;
   root = NULL;
   int val = 10;
 
   TEST_ASSERT_EQUAL_INT_MESSAGE(-1, print_inorder(root), "tree exists");
   TEST_ASSERT_EQUAL_INT_MESSAGE(-1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
-   val=11;
+  val = 11;
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
-   val=9;
+  val = 9;
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, print_inorder(root), "Empty tree");
-
 }
-void test_print_postorder(){
+void test_print_postorder()
+{
   node *root;
   root = NULL;
   int val = 10;
 
   TEST_ASSERT_EQUAL_INT_MESSAGE(-1, print_postorder(root), "tree exists");
   TEST_ASSERT_EQUAL_INT_MESSAGE(-1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
-   val=11;
+  val = 11;
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
-   val=9;
+  val = 9;
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, inserttree(&root, val), "Un Expected values, Watchout the parameters & Return vals");
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, print_postorder(root), "Empty tree");
-
 }
 int main()
 {

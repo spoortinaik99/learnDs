@@ -14,8 +14,6 @@
 
 #define MAX 50
 
-
-
 /**
  * @brief Contains all the stack operations 
  * Called after start_stack function is called first
@@ -44,8 +42,8 @@ void pop(char stack[], int *top, int stackSize);
  * @param stackSize 
  */
 int push(char element, char stack[], int *top, int stackSize);
-bool visualize_stack(char stack[],int stackSize);
- 
+bool visualize_stack(char stack[], int stackSize);
+
 /**
  * @brief Start queue function runs all the other queue functions to run queue
  * This runs when queue is intiated
@@ -72,17 +70,15 @@ int insertll(int data);
  * @return void
  */
 
-
-struct bin_tree {
-int data;
-struct bin_tree * right, * left;
+struct bin_tree
+{
+    int data;
+    struct bin_tree *right, *left;
 };
 typedef struct bin_tree node;
 
 void start_tree();
-int inserttree(node ** tree, int val);
-int print_preorder(node * tree);
-int print_inorder(node * tree);
-int print_postorder(node * tree);
-
-
+int inserttree(node **tree, int val);
+int print_preorder(node *tree);
+int print_inorder(node *tree);
+int print_postorder(node *tree);
