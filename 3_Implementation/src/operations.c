@@ -21,8 +21,11 @@ int stackSize = 10;
 char stack[10];
 char element;
 int top = -1;
-#endif
 
+int rear = -1;
+int front = -1;
+int queue_array[MAX];
+#endif
 /**
  * @brief This function takes stack and visualizes it beautifully.
  * 
@@ -176,16 +179,8 @@ int stack_op()
 
 //QUEUE
 
-#ifndef VARS
-#define VARS
-int rear = -1;
-int front = -1;
-int queue_array[MAX];
-#endif
-
 int display()
 {
-    int i;
     if (front == -1)
     {
         printf("Queue is empty n");
@@ -193,6 +188,7 @@ int display()
     }
     else
     {
+        int i;
         printf("\n\n\n------------------------------------------------------------\n\n\n");
 
         printf("Visualization of Queue is \n\n");
@@ -494,9 +490,6 @@ void tree_i()
 {
 
     node *root;
-    node *tmp;
-    //int i;
-
     root = NULL;
 
     int c, val;

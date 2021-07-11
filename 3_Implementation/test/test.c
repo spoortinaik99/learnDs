@@ -1,12 +1,6 @@
 #include "../inc/fun.h"
 #include "../unity/unity.h"
 #include "../unity/unity_internals.h"
-// #include "../unity/unity.c"
-/* Required by the unity test framework */
-void setUp() {}
-/* Required by the unity test framework */
-void tearDown() {}
-
 void test_div(void)
 {
   TEST_ASSERT_EQUAL(1, 1);
@@ -35,20 +29,8 @@ void q_display(void)
 void test_push(void)
 {
 
-  int stackSize = /*
-void test_visual_stack(void)
-{
-  #ifndef V
-  #define V
+  int stackSize =10;
   char stack[10];
-  stack[8]="q";
-  stack[9]="p";
-  #endif
-  TEST_ASSERT_EQUAL(true,visualize_stack(stack,8));
-}*/
-      10;
-  char stack[10];
-  char element;
   int top = -1;
   char *c = "y";
   TEST_ASSERT_EQUAL_INT_MESSAGE(1, push(*c, stack, &top, stackSize), "Un Expected values, Watchout the parameters & Return vals");
