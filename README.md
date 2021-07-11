@@ -6,6 +6,9 @@ This project helps Students who want to learn programming get started with Data 
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8035c86d99494b429ef5329fd37baf70)](https://www.codacy.com/gh/KubasadSumanth/learnDs/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=KubasadSumanth/learnDs&amp;utm_campaign=Badge_Grade)
 
+[![Valgrind-Dynamic Code Quality Analysis](https://github.com/KubasadSumanth/learnDs/actions/workflows/dynamic_valgrind.yml/badge.svg)](https://github.com/KubasadSumanth/learnDs/actions/workflows/dynamic_valgrind.yml)
+
+[![Unit Testing - Unity](https://github.com/KubasadSumanth/learnDs/actions/workflows/Testunity.yml/badge.svg)](https://github.com/KubasadSumanth/learnDs/actions/workflows/Testunity.yml)
 
 [![C CI - Build Status on Linux](https://github.com/KubasadSumanth/learnDs/actions/workflows/c-build.yml/badge.svg)](https://github.com/KubasadSumanth/learnDs/actions/workflows/c-build.yml)
 
