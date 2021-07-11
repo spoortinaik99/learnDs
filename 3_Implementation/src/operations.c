@@ -16,13 +16,23 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+
+#ifndef st
+#define st
+int stackSize = 10;
+char stack[10];
+char element;
+int top = -1;
+#endif
+
+
 /**
  * @brief This function takes stack and visualizes it beautifully.
  * 
  * @param stack 
  * @param stackSize 
  */
-void visualize_stack(char stack[],int stackSize){
+bool visualize_stack(char stack[],int stackSize){
     printf("\nVisualization of the stack:-\n\n\n\n");
     while (!(stackSize==10))
     {
@@ -31,6 +41,7 @@ void visualize_stack(char stack[],int stackSize){
     }
     
     getchar();
+    return true;
     
 }
 /**
@@ -85,11 +96,8 @@ void pop(char stack[], int *top, int stackSize){
 
 void start_stack(){
 
-    int cc,stackSize = 10;
-    char stack[stackSize];
-    char element;
+    int cc;
   // A negative index shows that the stack is empty
-  int top = -1;
     printf("\n\n\n------------------------------------------------------------\n\n\n");
             char k;
 
@@ -328,10 +336,13 @@ void printList() {
 }
 
 //insert link at the first location
-void insertll(int data) {
+int insertll(int data) {
    //create a link
    struct node *link = (struct node*) malloc(sizeof(struct node));
 
+    if(link==NULL){
+        return -1;
+    }
    //link->key = key;
    link->data = data;
 
@@ -342,6 +353,7 @@ void insertll(int data) {
    head = link;
    
    printList();
+   return 1;
 }
 
 
@@ -419,16 +431,10 @@ void start_ll(){
 
 //TREES
 
-struct bin_tree {
-int data;
-struct bin_tree * right, * left;
-};
-typedef struct bin_tree node;
 
 
 
-
-void inserttree(node ** tree, int val)
+int inserttree(node ** tree, int val)
 {
     node *temp = NULL;
     if(!(*tree))
@@ -437,16 +443,18 @@ void inserttree(node ** tree, int val)
         temp->left = temp->right = NULL;
         temp->data = val;
         *tree = temp;
-        return;
+        return -1;
     }
 
     if(val < (*tree)->data)
     {
         inserttree(&(*tree)->left, val);
+        return 1;
     }
     else if(val > (*tree)->data)
     {
         inserttree(&(*tree)->right, val);
+        return 1;
     }
 
 }

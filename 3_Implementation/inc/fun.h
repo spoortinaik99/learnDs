@@ -10,6 +10,11 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+
+#define MAX 50
+
+
 
 /**
  * @brief Contains all the stack operations 
@@ -39,7 +44,7 @@ void pop(char stack[], int *top, int stackSize);
  * @param stackSize 
  */
 int push(char element, char stack[], int *top, int stackSize);
-
+bool visualize_stack(char stack[],int stackSize);
  
 /**
  * @brief Start queue function runs all the other queue functions to run queue
@@ -49,7 +54,6 @@ int push(char element, char stack[], int *top, int stackSize);
  * @return void
  */
 void start_queue();
-#define MAX 50
 
 int display();
 
@@ -60,11 +64,21 @@ int display();
  * @return void
  */
 void start_ll();
+int insertll(int data);
 /**
  * @brief when user hits tree execution it initiates from this function
  * Definition of starttree function
  * takes no parameters
  * @return void
  */
+
+
+struct bin_tree {
+int data;
+struct bin_tree * right, * left;
+};
+typedef struct bin_tree node;
+
 void start_tree();
+int inserttree(node ** tree, int val);
 
