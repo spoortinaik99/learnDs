@@ -21,9 +21,6 @@ void test_define(void)
 
 void q_display(void)
 {
-  //char ele="9";
-  //char stack[10];
-
   TEST_ASSERT_EQUAL(0, display());
 }
 void test_push(void)
