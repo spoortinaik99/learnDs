@@ -35,7 +35,18 @@ void q_display(void)
 void test_push(void)
 {
 
-  int stackSize = 10;
+  int stackSize =/*
+void test_visual_stack(void)
+{
+  #ifndef V
+  #define V
+  char stack[10];
+  stack[8]="q";
+  stack[9]="p";
+  #endif
+  TEST_ASSERT_EQUAL(true,visualize_stack(stack,8));
+}*/
+ 10;
   char stack[10];
   char element;
   int top = -1;
@@ -115,6 +126,5 @@ int main()
   RUN_TEST(test_print_inorder);
   RUN_TEST(test_print_postorder);
 
-  /* Close the Unity Test Framework */
   return UNITY_END();
 }
