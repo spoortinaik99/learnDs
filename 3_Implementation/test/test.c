@@ -1,6 +1,5 @@
 #include "../inc/fun.h"
 #include "../unity/unity.h"
-
 #include "../unity/unity_internals.h"
 // #include "../unity/unity.c"
 /* Required by the unity test framework */
@@ -34,7 +33,7 @@ void test_display(void)
     TEST_ASSERT_EQUAL_INT_MESSAGE(2, b, "B is not equal to 2");
 }
 
-void pushop(void)
+void q_display(void)
 {
   //char ele="9";
   //char stack[10];
@@ -47,11 +46,11 @@ int main()
   UNITY_BEGIN();
 
 /* Run Test functions */
-  RUN_TEST(test_div);
-  RUN_TEST(test_FileAvailability);
-  RUN_TEST(t2);
-  RUN_TEST(pushop);
-  RUN_TEST(test_display);
+  //RUN_TEST(test_div);
+  //RUN_TEST(test_FileAvailability);
+  //RUN_TEST(t2);
+  RUN_TEST(q_display);
+  //RUN_TEST(test_display);
  
   /* Close the Unity Test Framework */
   return UNITY_END(); 

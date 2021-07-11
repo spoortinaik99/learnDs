@@ -10,7 +10,7 @@
  */
 
 
-#include <fun.h>
+#include "fun.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -168,12 +168,12 @@ int stack_op()
 
 //QUEUE
 
-
-#define MAX 50
-
+#ifndef VARS
+#define VARS
+int rear=-1;
+int front=-1;
 int queue_array[MAX];
-int rear = - 1;
-int front = - 1;
+#endif
 
 
 

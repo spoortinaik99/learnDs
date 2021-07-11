@@ -49,6 +49,10 @@ int push(char element, char stack[], int *top, int stackSize);
  * @return void
  */
 void start_queue();
+#define MAX 50
+
+int display();
+
 /**
  * @brief As its name says it is initiated when linked lists execution is called by the user
  * Definition of startll function
