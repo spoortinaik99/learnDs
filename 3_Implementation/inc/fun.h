@@ -81,4 +81,8 @@ typedef struct bin_tree node;
 
 void start_tree();
 int inserttree(node ** tree, int val);
+int print_preorder(node * tree);
+int print_inorder(node * tree);
+int print_postorder(node * tree);
+
 

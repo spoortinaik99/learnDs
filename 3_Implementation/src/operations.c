@@ -459,35 +459,44 @@ int inserttree(node ** tree, int val)
 
 }
 
-void print_preorder(node * tree)
+int print_preorder(node * tree)
 {
     if (tree)
     {
         printf("\t%d\n",tree->data);
         print_preorder(tree->left);
         print_preorder(tree->right);
+        return 1;
     }
-
+        return -1;
 }
 
-void print_inorder(node * tree)
+int print_inorder(node * tree)
 {
     if (tree)
     {
         print_inorder(tree->left);
         printf("\t%d\n",tree->data);
         print_inorder(tree->right);
+        return 1;
+
     }
+        return -1;
+
 }
 
-void print_postorder(node * tree)
+int print_postorder(node * tree)
 {
     if (tree)
     {
         print_postorder(tree->left);
         print_postorder(tree->right);
         printf("\t%d\n",tree->data);
+        return 1;
+
     }
+        return -1;
+
 }
 
 void deltree(node * tree)
